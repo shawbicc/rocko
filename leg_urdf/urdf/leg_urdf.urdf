@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="leg_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0054523 -0.031797 0.035247"
+        rpy="0 0 0" />
+      <mass
+        value="0.087475" />
+      <inertia
+        ixx="8.6451E-05"
+        ixy="-1.5882E-05"
+        ixz="-1.2368E-06"
+        iyy="5.1374E-05"
+        iyz="5.876E-07"
+        izz="7.5897E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_link">
+    <inertial>
+      <origin
+        xyz="-0.0012364 0.00012327 0.013522"
+        rpy="0 0 0" />
+      <mass
+        value="0.040095" />
+      <inertia
+        ixx="9.0548E-06"
+        ixy="7.5538E-08"
+        ixz="6.0887E-09"
+        iyy="5.6354E-06"
+        iyz="-7.5826E-12"
+        izz="1.0932E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/shoulder_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_back_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0052"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tibia_link">
+    <inertial>
+      <origin
+        xyz="-0.029077 0.0516 -0.0015978"
+        rpy="0 0 0" />
+      <mass
+        value="0.043233" />
+      <inertia
+        ixx="5.4993E-05"
+        ixy="-6.3736E-07"
+        ixz="-5.8862E-08"
+        iyy="3.0015E-06"
+        iyz="-2.6775E-07"
+        izz="5.3649E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="up_down_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.010107 0.0135"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link" />
+    <child
+      link="tibia_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="gripper_link">
+    <inertial>
+      <origin
+        xyz="0.06516 -1.1556E-05 -0.021052"
+        rpy="0 0 0" />
+      <mass
+        value="0.069921" />
+      <inertia
+        ixx="1.9179E-05"
+        ixy="-6.316E-08"
+        ixz="8.6271E-06"
+        iyy="8.0406E-05"
+        iyz="-4.5135E-09"
+        izz="8.8277E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leg_urdf/meshes/gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_joint"
+    type="continuous">
+    <origin
+      xyz="-0.028721 0.10739 0"
+      rpy="0 0 0" />
+    <parent
+      link="tibia_link" />
+    <child
+      link="gripper_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
