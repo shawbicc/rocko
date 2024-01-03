@@ -1,85 +1,98 @@
-#include <Servo.h>
+#include <math.h>
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+#define SERVO_FREQ 50 // Analog servos run at ~50 Hz updates
+#define PI 3.14159
 
-Servo shoulder_servo;
-Servo angle1_servo;
-Servo angle2_servo; 
-Servo gripper_servo;
+// array of max and min pwm values for servos
+const int SERVO_MIN[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 70, 0};
+const int SERVO_MAX[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 470, 450, 450};
 
-///////////////////////// CHANGE PIN NUMBERS //////////////////////////
-const int shoulder_servo_pin = 9;
-const int servo1_pin = 10;
-const int servo2_pin = 11;
-const int gripper_pin = 12;
-//////////////////////////////////////////////////////////////////////
-////////////////////////// SET ARM LENGTHS ///////////////////////////
-const float l1 = 3.0;
-const float l2 = 4.0;
-//////////////////////////////////////////////////////////////////////
-float theta1 = 0.0;
-float theta2 = 0.0;
-bool flag = false;
-const float step_length = 5;
+// link lengths (mm)
+const float LEN1 = 107.0;
+const float LEN2 = 90.0;
+
+// initial joint angles (degree)
+const int THETA1_INIT = 90;
+const int THETA3_INIT = 0;
+const int THETA2_INIT = 180;
+
+
+// function to convert angle (rad) to pwm
+int angle_to_pwm(int angle, int servo_idx){
+  return map(angle, -90, 90, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx]);
+}
+
+// function to convert pwm to angle (rad)
+int pwm_to_angle(int pwm_val, int servo_idx){
+  return map(pwm_val, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx], -90, 90);
+}
+
+// function to convert degree to radian
+float radian(float degree) {return degree*PI/180;}
+
+// function to convert radian to degree
+float degree(float radian) {return radian*180/PI;}
+
+// function for converting (x,y) into (theta1,theta2)
+void inverse_kinematics(float* angle_array, float x, float y, float l1, float l2){
+  float theta1 = acos(((x*x) + (y*y) - (l1*l1) - (l2*l2)) / (2*l1*l2));
+  float theta3 = atan(y/x) - atan((l2*sin(theta2)) / (l1 + l2*cos(theta2)));
+  float theta2 = PI;
+
+  angle_array[0] = theta1 - radian(THETA1_INIT);
+  angle_array[1] = theta2 - radian(THETA2_INIT);
+  angle_array[2] = theta3 - radian(THETA3_INIT);
+}
+
+// function for generating trajectory
+
+// fucntion for moving the servos to given position (degree)
+void move_servos(float* theta, int* servo_idx){
+  for(int i=0; i<sizeof(theta); i++){
+    int PWM = angle_to_pwm(theta[i], servo_idx[i]);
+    pwm.setPWM(servo_idx[i], 0, PWM);
+
+    Serial.print("Servo ");
+    Serial.print(servo_idx[i]);
+    Serial.print(" to position ");
+    Serial.print(degree(theta[i]));
+    Serial.println(" ");
+  }
+}
+
+
+// function for executing a trajectory once
+void execute_path(float* theta){
+  inverse_kinematics(theta, 0, 107+90, LEN1, LEN2);
+
+  Serial.println("Executing path: ");
+  Serial.println(degree(theta[0]));
+  Serial.println(degree(theta[1]));
+  Serial.println(degree(theta[2]));
+}
+
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(LED_BUILTIN, OUTPUT);
-  shoulder_servo.attach(shoulder_servo_pin);
-  angle1_servo.attach(servo1_pin);
-  angle2_servo.attach(servo2_pin);
-  gripper_servo.attach(gripper_pin);
-
-
+  pwm.begin();
+  pwm.setOscillatorFrequency(27000000);
+  pwm.setPWMFreq(SERVO_FREQ);
+  delay(10);
+  // set all angles to 0
+  Serial.println("Setting initial servo positions: ");
+  float initial_angles[3] = {0.0, 0.0, 0.0};
+  int servo_idx[3] = {13, 14, 15};
+  move_servos(initial_angles, servo_idx);
+  
+  delay(2000);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(Serial.available()>0){
-
-    /////////////////////////////// do what you gotta do each time there's an input in the serial monitor ////////////////////////////////////
-    if(flag){
-      digitalWrite(LED_BUILTIN, HIGH);
-      
-      gripper_servo.write(180); //////////// ADJUST ANGLE ///////////////
-      delay(500);
-      gripper_servo.write(0);
-      delay(500);
-      
-      for (theta1 = 0; theta1 <= 180; theta1 += 1) { // goes from 0 degrees to 180 degrees
-        // in steps of 1 degree
-        angle1_servo.write(theta1);              // tell servo to go to position in variable 'theta1'
-        theta2 = (asin(l1*sin(theta1)/l2) + theta1) * 180/3.1416;
-        angle2_servo.write(theta2);
-        shoulder_servo.write(theta1);
-        delay(15);                       // waits 15 ms for the servo to reach the position
-      }
-      
-    }
-    else{
-      digitalWrite(LED_BUILTIN, LOW);
-//      gripper_servo.write(0); //////////// ADJUST ANGLE ///////////////
-//      delay(300);
-      
-      gripper_servo.write(180); //////////// ADJUST ANGLE ///////////////
-      delay(500);
-      gripper_servo.write(0);
-      delay(500);
-      
-      for (theta1 = 180; theta1 >= 0; theta1 -= 1) { // goes from 0 degrees to 180 degrees
-        // in steps of 1 degree
-        angle1_servo.write(theta1);              // tell servo to go to position in variable 'theta1'
-        theta2 = (asin(l1*sin(theta1)/l2) + theta1) * 180/3.1416;
-        angle2_servo.write(theta2);
-        shoulder_servo.write(theta1);
-        delay(15);                       // waits 15 ms for the servo to reach the position
-      }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    // clear buffer
-    flag = !flag;
-    while(Serial.available()>0){
-      String garbage = Serial.readString();
-    }
-  } 
+  float theta[2];
+  execute_path(theta);
+  delay(3000);
 }
