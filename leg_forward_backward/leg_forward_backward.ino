@@ -6,27 +6,72 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 #define PI 3.14159
 
 // array of max and min pwm values for servos
-const int SERVO_MIN[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 70, 0};
-const int SERVO_MAX[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 470, 450, 450};
+const int SERVO_MIN[16] = {70, 70, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+const int SERVO_MAX[16] = {450, 450, 470, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-// link lengths (mm)
+// array for servo direction
+/////////////////////////////// FLIP DIRECTIONS IF NECESSARY  ///////////////////////////////
+
+const int SERVO_DIR[16] = {-1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////// SET ARM LENGTHS (mm)  //////////////////////////////////
+
 const float LEN1 = 107.0;
 const float LEN2 = 90.0;
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 // initial joint angles (degree)
+/////////////////////////////  ADJUST IF NEEDED  ////////////////////////////////////////////
+
 const int THETA1_INIT = 90;
 const int THETA3_INIT = 0;
-const int THETA2_INIT = 180;
+const int THETA2_INIT = 0;
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-// function to convert angle (rad) to pwm
-int angle_to_pwm(int angle, int servo_idx){
-  return map(angle, -90, 90, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx]);
+// function for generating x trajectory
+///////////////////////////  SET PARAMETRIC EQUATION FOR DESIRED X TRAJECTORY  //////////////
+
+float generate_x_trajectory(float u){
+  return 5.0;
 }
 
-// function to convert pwm to angle (rad)
+/////////////////////////////////////////////////////////////////////////////////////////////
+// function for generating y trajectory
+
+///////////////////////////  SET PARAMETRIC EQUATION FOR DESIRED X TRAJECTORY  //////////////
+
+float generate_y_trajectory(float u){
+  return 130 - 50*sin(((u)/10)*2*PI);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// NECESSARY FUNCTIONS, NO NEED TO ADJUST
+
+// function to convert angle (deg) to pwm; maps min-max to 0-180 by default
+int angle_to_pwm(int angle, int servo_idx){
+  if(SERVO_DIR[servo_idx] == 1){ return map(angle, 0, 180, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx]);}
+  else if(SERVO_DIR[servo_idx] == -1) {return map(angle, 0, 180, SERVO_MAX[servo_idx], SERVO_MIN[servo_idx]);}
+  else{ 
+    Serial.println("Invalid rotation direction!");
+    return ((SERVO_MAX[servo_idx]+SERVO_MIN[servo_idx])/2); // return average if invalid direction  
+  };
+}
+
+// function to convert pwm to angle (deg)
 int pwm_to_angle(int pwm_val, int servo_idx){
-  return map(pwm_val, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx], -90, 90);
+  if(SERVO_DIR[servo_idx] == 1){ return map(pwm_val, SERVO_MIN[servo_idx], SERVO_MAX[servo_idx], 0, 180); }
+  else if(SERVO_DIR[servo_idx] == -1){ return map(pwm_val, SERVO_MAX[servo_idx], SERVO_MIN[servo_idx], 0, 180); }
+  else{ 
+    Serial.println("Invalid rotation direction!");
+    return 0; // return average if invalid direction  
+  };
 }
 
 // function to convert degree to radian
@@ -35,64 +80,88 @@ float radian(float degree) {return degree*PI/180;}
 // function to convert radian to degree
 float degree(float radian) {return radian*180/PI;}
 
-// function for converting (x,y) into (theta1,theta2)
-void inverse_kinematics(float* angle_array, float x, float y, float l1, float l2){
-  float theta1 = acos(((x*x) + (y*y) - (l1*l1) - (l2*l2)) / (2*l1*l2));
-  float theta3 = atan(y/x) - atan((l2*sin(theta2)) / (l1 + l2*cos(theta2)));
-  float theta2 = PI;
 
-  angle_array[0] = theta1 - radian(THETA1_INIT);
-  angle_array[1] = theta2 - radian(THETA2_INIT);
-  angle_array[2] = theta3 - radian(THETA3_INIT);
+// function for converting (x,y) into (theta1,theta2); takes an array of 3 float numbers and populates them with angle values
+// NOTE: for now, motion is limited to xy plane
+void inverse_kinematics(float* angle_array, float x, float y){
+  float theta3 = acos(((x*x) + (y*y) - (LEN1*LEN1) - (LEN2*LEN2)) / (2*LEN1*LEN2));
+  float theta1 = atan(y/x) - atan((LEN2*sin(theta3)) / (LEN1 + LEN2*cos(theta3)));
+  float theta2 = 0.0;
+
+  angle_array[0] = degree(theta1) ;
+  angle_array[1] = degree(theta2) ;
+  angle_array[2] = degree(theta3) ;
 }
 
-// function for generating trajectory
 
 // fucntion for moving the servos to given position (degree)
-void move_servos(float* theta, int* servo_idx){
-  for(int i=0; i<sizeof(theta); i++){
+void move_servos(int* servo_idx, float* theta){
+  for(int i=0; i<=sizeof(theta); i++){
     int PWM = angle_to_pwm(theta[i], servo_idx[i]);
-    pwm.setPWM(servo_idx[i], 0, PWM);
+    // pwm.setPWM(servo_idx[i], 0, PWM);
 
     Serial.print("Servo ");
     Serial.print(servo_idx[i]);
     Serial.print(" to position ");
-    Serial.print(degree(theta[i]));
+    Serial.print(theta[i]);
+    Serial.print("; PWM: ");
+    Serial.print(PWM);
     Serial.println(" ");
   }
+  Serial.println(" ");
 }
 
 
 // function for executing a trajectory once
-void execute_path(float* theta){
-  inverse_kinematics(theta, 0, 107+90, LEN1, LEN2);
+void execute_path(int* servo_idx, float* theta){
 
-  Serial.println("Executing path: ");
-  Serial.println(degree(theta[0]));
-  Serial.println(degree(theta[1]));
-  Serial.println(degree(theta[2]));
+  for(float u = 0.0; u<=10.0; u+=0.01){
+    // array for servo angles
+    float theta[3];
+
+    // generate desired x,y coordinates of gripper
+    float x = generate_x_trajectory(u);
+    float y = generate_y_trajectory(u);
+    
+    // calculate angles for reaching that point
+    inverse_kinematics(theta, x, y);
+
+    // apply angles to servo 
+    move_servos(servo_idx, theta);
+
+    // print the angles in serial monitor
+    Serial.println("Executing Angles: ");
+    Serial.println((theta[0]));
+    Serial.println((theta[1]));
+    Serial.println((theta[2]));
+    delay(500);
+  }
 }
 
 
 void setup() {
-  // put your setup code here, to run once:
+  // initiate serial monitor and PWM driver
   Serial.begin(9600);
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(SERVO_FREQ);
-  delay(10);
-  // set all angles to 0
+  delay(1000);
+
+  // set an initial position
   Serial.println("Setting initial servo positions: ");
-  float initial_angles[3] = {0.0, 0.0, 0.0};
-  int servo_idx[3] = {13, 14, 15};
-  move_servos(initial_angles, servo_idx);
+  float initial_angles[3] = {(THETA1_INIT), (THETA2_INIT), (THETA3_INIT)};
+  int servo_idx[3] = {0, 1, 2};
+  move_servos(servo_idx, initial_angles);
   
   delay(2000);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  float theta[2];
-  execute_path(theta);
+
+  float theta[3];  // array for angles
+  int servo_idx[3] = {0, 1, 2};  // array for servo index according to wiring on Servo driver 
+
+  execute_path(servo_idx, theta);  // execute the desired trajectory
   delay(3000);
+
 }
