@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="01/15/24||23:58:58" using="Simscape Multibody Link Version 7.4" from="SolidWorks 30.1.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="body-assembly" uid="body-assembly" version="236">
+<AssemblyFile name="body-assembly.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="shoulder-front-left-servo-2" uid="shoulder-front-left-servo-2" entityUid="shoulder-front-left-servo" rigid="true">
+<Transform>
+<Rotation>-0.47607618621793829 0.87940403962921554 3.9621281831340051e-16 -5.1879738906366978e-16 1.6968961840459915e-16 -1 -0.87940403962921554 -0.47607618621793829 3.7544733332084197e-16</Rotation>
+<Translation>0.26172971007087625 0.040276091474252582 0.034458370551227711</Translation>
+</Transform>
+<Instance name="MG996 servo mount-1" uid="MG996 servo mount-1" entityUid="MG996 servo mount*:*Default">
+<Transform>
+<Rotation>0.98607129821908512 -0.16632316383633478 8.3786722374725265e-16 0.16632316383633478 0.98607129821908512 5.6952467423129802e-16 -9.2092196675668026e-16 -4.2223520735864728e-16 1</Rotation>
+<Translation>0.0033289110216958018 0.038327690593053604 0.011504007480023948</Translation>
+</Transform>
+</Instance>
+<Instance name="MG996R.STEP-1" uid="MG996R.STEP-1" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>0.9860712982190849 -0.16632316383633444 8.4067825482602068e-16 0.16632316383633444 0.9860712982190849 5.5285906373400037e-16 -9.2092196675668144e-16 -4.0533418759730191e-16 0.99999999999999989</Rotation>
+<Translation>0.0062611884001304297 0.020943253605451101 0.025004007480023932</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122216 0 -0.54694413860398883 -1.1102230246251568e-16 -0.99999999999999989 0 -0.54694413860398894 0 0.83716910433122205</Rotation>
+<Translation>-0.010108898943541 0.043000000000000038 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="mg996r horn disk-1" uid="mg996r horn disk-1" entityUid="mg996r horn disk*:*Default">
+<Transform>
+<Rotation>-0.95936268115852952 -0.22794703589165116 0.16632316383633439 -0.16181815319539206 -0.038448408614151733 -0.98607129821908512 0.2311668905720507 -0.97291411167854358 5.754177773858816e-16</Rotation>
+<Translation>-0.011025125913491446 0.062649046671899494 0.025004007480023925</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="gripper-back-right-1" uid="gripper-back-right-1" entityUid="gripper-back-right" rigid="true">
+<Transform>
+<Rotation>0.39902117344672067 0.91694015626648218 0.0016890728822373813 0.0047574495321518109 -0.0039123206798094626 0.99998103003049388 0.91692937013444586 -0.39900556834823442 -0.0059233953059986263</Rotation>
+<Translation>0.25565178162433844 -0.056305952199686357 -0.15544043134967833</Translation>
+</Transform>
+<Instance name="Suction cup-1" uid="Suction cup-1" grounded="true" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0090509240422284726 0.018665659712120197 0.022115954427231271</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring holder-1" uid="Spring holder-1" entityUid="Spring holder*:*Default">
+<Transform>
+<Rotation>0.29193046051626476 -0.956439546559406 0 -0.95643954655940577 -0.29193046051626476 0 0 0 -1</Rotation>
+<Translation>0.0090509240422284726 0.018665659712120086 0.048918016620327825</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-1" uid="Spring-1" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>1 0 -1.6653345369377341e-16 1.6653345369377341e-16 0 1 0 -1 0</Rotation>
+<Translation>0.0090507675600917242 0.018704122492608388 0.031542214856707579</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-5" uid="Suction cup-5" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.63661351981957326 -0.77118300446971366 0 0.77118300446971344 -0.63661351981957304 0 0 0 1</Rotation>
+<Translation>-0.031656299159111112 -0.010367458949785857 0.022115954427231271</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-6" uid="Spring-6" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>0.47035282631064246 0 -0.88247845230441246 0.88247845230441224 0 0.47035282631064224 0 -1 0</Rotation>
+<Translation>-0.036739648328804581 0.039618949993395769 0.031542214856707586</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-7" uid="Spring-7" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>-0.99983351298709133 0 -0.018246816376887125 0.018246816376887125 0 -0.99983351298709133 0 -1 0</Rotation>
+<Translation>-0.03187674108500306 -0.010617945456925681 0.031542214856707586</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>-0.41473860157861298 -0.90994059825936824 1.2490009027033011e-16 -0.90994059825936813 0.4147386015786127 0 0 -1.3097162243624894e-16 -1</Rotation>
+<Translation>-0.0044423642932046592 0.049340183595709963 0.079012887761144818</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817001</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817001</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Suction cup-6" uid="Suction cup-6" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.86015395291451691 0.51003448636884452 0 -0.51003448636884452 -0.86015395291451702 0 0 0 1</Rotation>
+<Translation>-0.036446105870740098 0.039402589791050657 0.022115954427231285</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="shoulder-front-left-servo-1" uid="shoulder-front-left-servo-1" entityUid="shoulder-front-left-servo" rigid="true">
+<Transform>
+<Rotation>-0.44080614766143855 0.89760232853078215 0 2.3273423545533595e-16 1.5093257741992505e-16 -1.0000000000000002 -0.89760232853078215 -0.44080614766143855 -2.7543479968262986e-16</Rotation>
+<Translation>0.0053096302333419353 0.040276091474252707 0.033398101793845877</Translation>
+</Transform>
+<Instance name="MG996 servo mount-1" uid="MG996 servo mount-1" entityUid="MG996 servo mount*:*Default">
+<Transform>
+<Rotation>0.98607129821908512 -0.16632316383633478 8.3786722374725166e-16 0.16632316383633478 0.98607129821908512 5.6952467423129694e-16 -9.2092196675668045e-16 -4.2223520735864743e-16 1</Rotation>
+<Translation>0.0033289110216958087 0.038327690593053618 0.011504007480023948</Translation>
+</Transform>
+</Instance>
+<Instance name="MG996R.STEP-1" uid="MG996R.STEP-1" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>0.98607129821908512 -0.16632316383633453 8.4067825482602068e-16 0.16632316383633453 0.98607129821908512 5.5285906373400086e-16 -9.2092196675668183e-16 -4.0533418759730206e-16 1</Rotation>
+<Translation>0.0062611884001304088 0.020943253605451108 0.025004007480023946</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122205 0 -0.54694413860398883 0 -1 0 -0.54694413860398883 0 0.83716910433122205</Rotation>
+<Translation>-0.010108898943541 0.04300000000000001 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="mg996r horn disk-1" uid="mg996r horn disk-1" entityUid="mg996r horn disk*:*Default">
+<Transform>
+<Rotation>-0.95936268115852952 -0.22794703589165116 0.16632316383633444 -0.16181815319539206 -0.038448408614151719 -0.98607129821908523 0.23116689057205081 -0.9729141116785438 5.5601262658903788e-16</Rotation>
+<Translation>-0.011025125913491446 0.062649046671899494 0.025004007480023932</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="gripper-front-left-1" uid="gripper-front-left-1" entityUid="gripper-front-left" rigid="true">
+<Transform>
+<Rotation>0.42475343126433085 0.90521532975630636 -0.013028023770270954 0.04514239605315723 -0.0068049522158373258 0.99895738482876228 0.90418288344104214 -0.42489869310168693 -0.043754015732515222</Rotation>
+<Translation>0.0030761413832031265 -0.051612099459689691 0.14660556112064643</Translation>
+</Transform>
+<Instance name="Spring-7" uid="Spring-7" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>-0.99983351298709133 0 -0.018246816376887354 0.018246816376887409 0 -0.99983351298709122 0 -0.99999999999999989 0</Rotation>
+<Translation>-0.031876741085003019 -0.010617945456925668 0.031542214856707572</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-6" uid="Suction cup-6" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.8601539529145168 0.51003448636884463 0 -0.51003448636884452 -0.86015395291451702 0 0 0 0.99999999999999989</Rotation>
+<Translation>-0.036446105870740098 0.039402589791050636 0.022115954427231278</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>-0.4147386015786127 -0.90994059825936813 1.2490009027033011e-16 -0.90994059825936802 0.4147386015786127 0 0 -1.3183898417423734e-16 -0.99999999999999989</Rotation>
+<Translation>-0.0044423642932046314 0.049340183595709991 0.079012887761144804</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140816997</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140816997</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Suction cup-1" uid="Suction cup-1" grounded="true" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0090509240422284587 0.018665659712120086 0.022115954427231264</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring holder-1" uid="Spring holder-1" entityUid="Spring holder*:*Default">
+<Transform>
+<Rotation>0.29193046051626464 -0.95643954655940577 0 -0.95643954655940577 -0.29193046051626453 0 0 0 -1</Rotation>
+<Translation>0.0090509240422284309 0.018665659712120086 0.048918016620327819</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-5" uid="Suction cup-5" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.63661351981957304 -0.77118300446971366 0 0.77118300446971344 -0.63661351981957293 0 0 0 0.99999999999999989</Rotation>
+<Translation>-0.031656299159111098 -0.010367458949785871 0.022115954427231264</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-1" uid="Spring-1" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 0.99999999999999978 0 -0.99999999999999989 0</Rotation>
+<Translation>0.0090507675600916826 0.018704122492608388 0.031542214856707565</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-6" uid="Spring-6" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>0.47035282631064207 0 -0.88247845230441235 0.88247845230441213 0 0.47035282631064201 0 -0.99999999999999989 0</Rotation>
+<Translation>-0.036739648328804567 0.039618949993395741 0.031542214856707579</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="gripper-back-left-1" uid="gripper-back-left-1" entityUid="gripper-back-left" rigid="true">
+<Transform>
+<Rotation>0.41043615585814669 0.91127081472352844 -0.033580711688472174 0.1034312103249196 -0.0099344443731452375 0.99458699546380513 0.90600449595744803 -0.41168775673817909 -0.098331298459730404</Rotation>
+<Translation>0.26375761340859699 -0.045786229355912478 0.14601019156768</Translation>
+</Transform>
+<Instance name="Spring-1" uid="Spring-1" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 1.0000000000000004 0 -1 0</Rotation>
+<Translation>0.0090507675600917104 0.018704122492608444 0.031542214856707565</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-6" uid="Suction cup-6" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.8601539529145168 0.51003448636884474 0 -0.51003448636884485 -0.86015395291451702 0 0 0 1</Rotation>
+<Translation>-0.036446105870740098 0.039402589791050685 0.022115954427231271</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring holder-1" uid="Spring holder-1" entityUid="Spring holder*:*Default">
+<Transform>
+<Rotation>0.29193046051626459 -0.95643954655940588 0 -0.956439546559406 -0.29193046051626464 0 0 0 -1</Rotation>
+<Translation>0.0090509240422284865 0.018665659712120086 0.048918016620327819</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>-0.41473860157861264 -0.90994059825936813 1.1102230246251565e-16 -0.90994059825936846 0.4147386015786127 0 0 -1.1102230246251565e-16 -1</Rotation>
+<Translation>-0.0044423642932046037 0.049340183595709991 0.079012887761144804</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Suction cup-5" uid="Suction cup-5" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.63661351981957282 -0.77118300446971355 0 0.77118300446971366 -0.63661351981957315 0 0 0 1</Rotation>
+<Translation>-0.031656299159111084 -0.010367458949785885 0.022115954427231257</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-7" uid="Spring-7" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>-0.99983351298709133 0 -0.018246816376887354 0.018246816376887409 0 -0.99983351298709178 0 -1 0</Rotation>
+<Translation>-0.031876741085003019 -0.010617945456925654 0.031542214856707572</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-1" uid="Suction cup-1" grounded="true" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0090509240422284587 0.018665659712120058 0.022115954427231257</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-6" uid="Spring-6" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>0.47035282631064196 0 -0.88247845230441235 0.88247845230441235 0 0.47035282631064196 0 -1 0</Rotation>
+<Translation>-0.036739648328804553 0.039618949993395797 0.031542214856707572</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="shoulder-servo-5" uid="shoulder-servo-5" entityUid="shoulder-servo" rigid="true">
+<Transform>
+<Rotation>-0.10528953339232854 0.99444160922500913 9.2405542855215675e-16 5.240336578928332e-16 9.8470405782467707e-16 -1 -0.99444160922500913 -0.10528953339232854 -6.2479990482090967e-16</Rotation>
+<Translation>-0.021913991293915473 0.040276091474232736 0.017903697287131811</Translation>
+</Transform>
+<Instance name="MG996R.STEP-3" uid="MG996R.STEP-3" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>-0.90017095512646583 -0.43553673960609346 -5.1295009364890981e-16 -0.43553673960609346 0.90017095512646583 3.4676901313276978e-16 3.1071213035588009e-16 5.3556000512847386e-16 -0.99999999999999978</Rotation>
+<Translation>0.092035299754442843 0.053460811174581013 0.024504007480004236</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122216 0 -0.54694413860398894 0 -1 0 -0.54694413860398894 0 0.83716910433122216</Rotation>
+<Translation>-0.010108898943541 0.042999999999999983 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MG996 servo mount-2" uid="MG996 servo mount-2" entityUid="MG996 servo mount*:*Default">
+<Transform>
+<Rotation>0.90017095512646561 -0.43553673960609418 7.8697613608898878e-16 0.43553673960609418 0.90017095512646561 -1.0907600666781897e-15 -2.3334697695141546e-16 1.3246275514955129e-15 1</Rotation>
+<Translation>0.084356787035187591 0.069330825113460975 0.011504007480004255</Translation>
+</Transform>
+</Instance>
+<Instance name="mg996r horn disk-2" uid="mg996r horn disk-2" entityUid="mg996r horn disk*:*Default">
+<Transform>
+<Rotation>-0.87578902516569279 -0.20808972067985182 0.43553673960609451 -0.42373984011723365 -0.10068167382462513 -0.9001709551264655 0.23116689057204304 -0.97291411167854536 -1.5352587276131343e-15</Rotation>
+<Translation>0.081971420429058625 0.097471130087023433 0.024504007480004308</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="body-1" uid="body-1" entityUid="body" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.33199999999999841 0 -0.06000000000000473</Translation>
+</Transform>
+<Instance name="bearing-1" uid="bearing-1" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.251 -0.0014999999999987385 0.029999999999994212</Translation>
+</Transform>
+</Instance>
+<Instance name="body joint bracket-2" uid="body joint bracket-2" entityUid="body joint bracket*:*Default">
+<Transform>
+<Rotation>-2.5146551507759796e-14 -2.4442065835829133e-16 0.99999999999999978 0 1 2.4442065835829488e-16 -0.99999999999999978 0 -2.5146551507759796e-14</Rotation>
+<Translation>-0.0030000000000001137 0.053472083994228772 -0.003251697507538967</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-3" uid="bearing-3" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>0.9555368612498879 -5.6675003981161359e-16 0.29487167851917029 1.2411698956598341e-15 1 -2.1000102474228541e-15 -0.29487167851917029 2.3726230508757146e-15 0.9555368612498879</Rotation>
+<Translation>-0.080999999999999961 0.047500000000012921 0.030000000000002188</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-4" uid="bearing-4" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.080999999999999961 -0.0014999999999990856 0.029999999999999465</Translation>
+</Transform>
+</Instance>
+<Instance name="body joint bracket-1" uid="body joint bracket-1" entityUid="body joint bracket*:*Default">
+<Transform>
+<Rotation>2.503552920529728e-14 -1.2221032917914606e-16 -0.99999999999999978 0 1 -1.2221032917914448e-16 0.99999999999999978 0 2.503552920529728e-14</Rotation>
+<Translation>-0.32899999999999835 0.053472083994228689 0.063251697507547264</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-2" uid="bearing-2" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.25099999999999995 0.047500000000013143 0.029999999999994226</Translation>
+</Transform>
+</Instance>
+<Instance name="baseplate-2" uid="baseplate-2" entityUid="baseplate*:*Default">
+<Transform>
+<Rotation>0.38268343236509589 0.92387953251128441 -6.1756957202585592e-16 -1.7942826950020431e-16 -5.9413086519858025e-16 -1 -0.92387953251128441 0.38268343236509589 0</Rotation>
+<Translation>-0.29000594146401742 0.049000000000012311 -0.0032516975075422838</Translation>
+</Transform>
+</Instance>
+<Instance name="baseplate-1" uid="baseplate-1" entityUid="baseplate*:*Default">
+<Transform>
+<Rotation>0.38268343236511893 0.92387953251127453 0 0 0 -1 -0.92387953251127453 0.38268343236511893 0</Rotation>
+<Translation>-0.29000594146401626 0 -0.0032516975075431859</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-6" uid="spacer-6" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>0.42062098682058985 0 -0.90723645509099404 0 1 0 0.90723645509099404 0 0.42062098682058985</Rotation>
+<Translation>-0.10599999999999116 0.0030000000000108139 0.052000000000009677</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-3" uid="spacer-3" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>0.3601916011258039 6.1756957202584527e-16 -0.93287834709485573 -2.799030193842078e-16 1 5.5393166421233107e-16 0.93287834709485573 0 0.3601916011258039</Rotation>
+<Translation>-0.16599999999999504 0.0030000000000037805 0.052000000000017185</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-5" uid="spacer-5" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>0.42062098682058985 0 -0.90723645509099404 0 1 0 0.90723645509099404 0 0.42062098682058985</Rotation>
+<Translation>-0.22599999999999959 0.0030000000000070626 0.0080000000000259794</Translation>
+</Transform>
+</Instance>
+<Instance name="shoulder-back-1" uid="shoulder-back-1" entityUid="shoulder-back" rigid="true">
+<Transform>
+<Rotation>0.35835385620813409 -0.93358583630042291 3.3293201916422046e-16 0 -3.8857805861880489e-16 -1 0.9335858363004228 0.35835385620813409 -2.1698508256326876e-16</Rotation>
+<Translation>-0.0038030564523423016 0.040276091474252915 -0.030325587824844694</Translation>
+</Transform>
+<Instance name="MG996 servo mount 2 with hing (Upper body)-1" uid="MG996 servo mount 2 with hing (Upper body)-1" grounded="true" entityUid="MG996 servo mount 2 with hing (Upper body)*:*Default">
+<Transform>
+<Rotation>0.99965692969538733 0.026192039095713437 0 -0.026192039095713493 0.99965692969538744 1.2244433209562219e-16 0 -1.2242266591969419e-16 1</Rotation>
+<Translation>0.0144567385143285 0.037887924926765182 -0.009295992519975857</Translation>
+</Transform>
+</Instance>
+<Instance name="MG996R.STEP-4" uid="MG996R.STEP-4" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>-0.72538476230541804 4.2786480318997457e-16 -0.68834362539004601 -0.68834362539004601 -4.5416798595321131e-16 0.72538476230541804 0 1 6.2396454634198627e-16</Rotation>
+<Translation>0.07708740473803781 0.06223593070039618 -0.032295992519975808</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122205 0 -0.54694413860398905 0 -1 0 -0.54694413860398905 0 0.83716910433122205</Rotation>
+<Translation>-0.010108898943541 0.042999999999999997 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MG996R.STEP-2" uid="MG996R.STEP-2" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>0.99965692969538733 0 -0.026192039095713437 -0.026192039095713493 1.2246467991473678e-16 -0.99965692969538744 0 1 1.2242266591969419e-16</Rotation>
+<Translation>0.013457081584633226 0.037914116965861111 -0.0322959925199756</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122216 0 -0.54694413860398905 0 -1 0 -0.54694413860398927 0 0.83716910433122216</Rotation>
+<Translation>-0.010108898943541007 0.042999999999999997 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Servo MG996R arm01-2" uid="Servo MG996R arm01-2" entityUid="Servo MG996R arm01*:*Default">
+<Transform>
+<Rotation>-0.79877806657698558 -0.60162579761470725 -7.7385440717335177e-16 -0.60162579761470747 0.79877806657698569 1.0985318557407694e-15 0 1.3430539267551635e-15 -0.99999999999999978</Rotation>
+<Translation>0.084420245995367932 0.069194326847894838 0.013004007480024143</Translation>
+</Transform>
+</Instance>
+<Instance name="Servo MG996R arm01-1" uid="Servo MG996R arm01-1" entityUid="Servo MG996R arm01*:*Default">
+<Transform>
+<Rotation>-0.98566933982026783 -0.16868892239349081 -8.3786722374724643e-16 -0.16868892239349076 0.98566933982026805 -5.6952467423129743e-16 9.2193253686057056e-16 -4.2002409057816747e-16 -1</Rotation>
+<Translation>0.0033516507041319449 0.038178889642204672 0.013004007480023956</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="spacer-4" uid="spacer-4" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>-0.024975923273908185 -6.0825751996809314e-16 0.99968805297283403 -1.1030190828207344e-16 -1 -6.1120307494853865e-16 0.99968805297283403 -1.2553286103438565e-16 0.024975923273908185</Rotation>
+<Translation>-0.22599999999999454 0.049000000000000009 0.052000000000028135</Translation>
+</Transform>
+</Instance>
+<Instance name="shoulder-front-1" uid="shoulder-front-1" entityUid="shoulder-front" rigid="true">
+<Transform>
+<Rotation>-0.35835385620813398 0.93358583630042302 0 2.7755575615628914e-16 0 -1.0000000000000002 -0.93358583630042291 -0.35835385620813404 -2.1163626406917047e-16</Rotation>
+<Translation>-0.32819694354765616 0.04027609147425279 0.090325587824852963</Translation>
+</Transform>
+<Instance name="MG996R.STEP-2" uid="MG996R.STEP-2" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>0.99965692969538722 0 -0.026192039095713437 -0.026192039095713437 1.1753765789706284e-16 -0.99965692969538744 0 1.0000000000000002 1.2242266591969412e-16</Rotation>
+<Translation>0.013457081584633223 0.037914116965861167 -0.032295992519975621</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122194 0 -0.54694413860398894 0 -1 0 -0.54694413860398894 0 0.83716910433122194</Rotation>
+<Translation>-0.010108898943541 0.042999999999999997 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MG996R.STEP-4" uid="MG996R.STEP-4" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>-0.72538476230541804 4.3408458000564973e-16 -0.68834362539004601 -0.68834362539004601 -4.0495722853475495e-16 0.72538476230541804 0 1 5.9254915649154851e-16</Rotation>
+<Translation>0.077087404738037824 0.062235930700396264 -0.032295992519975829</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122216 0 -0.54694413860398905 0 -1 0 -0.54694413860398905 0 0.83716910433122216</Rotation>
+<Translation>-0.010108898943541 0.04300000000000001 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MG996 servo mount 2 with hing (Upper body)-1" uid="MG996 servo mount 2 with hing (Upper body)-1" grounded="true" entityUid="MG996 servo mount 2 with hing (Upper body)*:*Default">
+<Transform>
+<Rotation>0.99965692969538722 0.026192039095713437 0 -0.026192039095713437 0.99965692969538744 1.2244433209562227e-16 0 -1.2735137883240839e-16 1</Rotation>
+<Translation>0.014456738514328514 0.037887924926765182 -0.009295992519975857</Translation>
+</Transform>
+</Instance>
+<Instance name="Servo MG996R arm01-2" uid="Servo MG996R arm01-2" entityUid="Servo MG996R arm01*:*Default">
+<Transform>
+<Rotation>-0.79877806657698547 -0.60162579761470747 -8.2332335067441062e-16 -0.60162579761470736 0.79877806657698558 1.094897588521096e-15 0 1.3699127464029908e-15 -1</Rotation>
+<Translation>0.08442024599536796 0.069194326847894852 0.013004007480024143</Translation>
+</Transform>
+</Instance>
+<Instance name="Servo MG996R arm01-1" uid="Servo MG996R arm01-1" entityUid="Servo MG996R arm01*:*Default">
+<Transform>
+<Rotation>-0.98566933982026794 -0.16868892239349081 -8.8733616724830529e-16 -0.16868892239349081 0.98566933982026794 -5.7315894145097062e-16 9.7130561836384213e-16 -4.1526141357817486e-16 -1</Rotation>
+<Translation>0.0033516507041319518 0.038178889642204721 0.01300400748002396</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="spacer-1" uid="spacer-1" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>0.42062098682058985 0 -0.90723645509099404 0 1 0 0.90723645509099404 0 0.42062098682058985</Rotation>
+<Translation>-0.10599999999999737 0.0030000000000122216 0.0080000000000089513</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-2" uid="spacer-2" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>0.42062098682058985 0 -0.90723645509099404 0 1 0 0.90723645509099404 0 0.42062098682058985</Rotation>
+<Translation>-0.16599999999999837 0.0030000000000096837 0.0080000000000171531</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="shoulder-servo-other-3" uid="shoulder-servo-other-3" entityUid="shoulder-servo-other" rigid="true">
+<Transform>
+<Rotation>-0.3572806545327501 0.93399707381589248 1.4489379431179907e-15 -1.2456024366963057e-15 1.0748516428922285e-15 -1 -0.93399707381589248 -0.3572806545327501 7.7936533251415762e-16</Rotation>
+<Translation>0.25914379308357305 0.040276091474253012 0.030016038905168019</Translation>
+</Transform>
+<Instance name="MG996 servo mount-2" uid="MG996 servo mount-2" entityUid="MG996 servo mount*:*Default">
+<Transform>
+<Rotation>0.80021946506824593 -0.59970726836173194 7.7385440717335532e-16 0.59970726836173194 0.80021946506824593 -1.0985318557407644e-15 0 1.3431526865969225e-15 1</Rotation>
+<Translation>0.084331845152817789 0.069316163242979206 0.011504007480024146</Translation>
+</Transform>
+</Instance>
+<Instance name="MG996R.STEP-3" uid="MG996R.STEP-3" entityUid="MG996R.STEP" rigid="true">
+<Transform>
+<Rotation>-0.80021946506824693 -0.59970726836173072 -5.1587969804351912e-16 -0.59970726836173072 0.80021946506824693 3.4882390650961092e-16 2.0362474389580706e-16 5.885124843870903e-16 -1.0000000000000002</Rotation>
+<Translation>0.094904684294035063 0.055208294073825798 0.024504007480024088</Translation>
+</Transform>
+<Instance name="shaft.STEP-1" uid="shaft.STEP-1" grounded="true" entityUid="shaft.STEP*:*Default">
+<Transform>
+<Rotation>-0.83716910433122216 0 -0.54694413860398894 0 -1 0 -0.54694413860398894 0 0.83716910433122216</Rotation>
+<Translation>-0.010108898943541 0.042999999999999983 0</Translation>
+</Transform>
+</Instance>
+<Instance name="servo.STEP-1" uid="servo.STEP-1" grounded="true" entityUid="servo.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="mg996r horn disk-2" uid="mg996r horn disk-2" entityUid="mg996r horn disk*:*Default">
+<Transform>
+<Rotation>-0.77854481000475395 -0.18498424551505349 0.59970726836173016 -0.58346366426531981 -0.13863246448063535 -0.80021946506824715 0.23116689057204581 -0.97291411167854458 -1.5510419863738376e-15</Rotation>
+<Translation>0.076606902191148282 0.09648033070840431 0.024504007480024112</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="femur-front-right-2" uid="femur-front-right-2" entityUid="femur-front-right" rigid="true">
+<Transform>
+<Rotation>-0.9956408459019056 -0.093254774701009874 0.0016890728822374689 0.0011292963783940224 0.0060551027111334817 0.99998103003049388 -0.093263233170566132 0.99562386608930886 -0.0059233953059981501</Rotation>
+<Translation>0.36377115511319941 -0.01904007213699167 -0.19591744215206214</Translation>
+</Transform>
+<Instance name="Microservo horn-1" uid="Microservo horn-1" entityUid="Microservo horn*:*?? ?????????">
+<Transform>
+<Rotation>0.41957011073626183 -0.90772293249469083 0 0.90772293249469072 0.41957011073626183 0 0 0 1</Rotation>
+<Translation>0.0087060153746610913 0.018334323170730416 0.0072304606526493332</Translation>
+</Transform>
+</Instance>
+<Instance name="extra mount part-1" uid="extra mount part-1" entityUid="extra mount part*:*Default">
+<Transform>
+<Rotation>0.9830492128894458 -1.5594904272691552e-16 -0.18334188020591746 -0.18334188020591746 4.3642360231855607e-16 -0.9830492128894458 2.3332030751888055e-16 1 4.0043388803576743e-16</Rotation>
+<Translation>0.015856348702691814 0.056673242473418928 0.029730460652649334</Translation>
+</Transform>
+</Instance>
+<Instance name="mini servo mount_Right upper leg-1" uid="mini servo mount_Right upper leg-1" entityUid="mini servo mount_Right upper leg*:*Default">
+<Transform>
+<Rotation>0.98304921288944591 -0.18334188020591732 -1.7703848101873997e-16 -0.18334188020591732 -0.98304921288944591 0 -1.8106176280507929e-16 0 -1.0000000000000002</Rotation>
+<Translation>0.030038183294362086 0.014355804370261988 0.042030460652649329</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO-1" uid="Assembly SERVO-1" entityUid="Assembly SERVO" rigid="true">
+<Transform>
+<Rotation>0.18334188020591707 -0.98304921288944591 6.4278813219676905e-16 0.98304921288944591 0.18334188020591705 1.0527181665847738e-15 -1.1527237497865877e-15 4.3888503942213274e-16 1</Rotation>
+<Translation>0.0096914779807679152 0.023618212690011187 0.0038855895118323283</Translation>
+</Transform>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" grounded="true" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817001</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817001</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="femur-front-left-2" uid="femur-front-left-2" entityUid="femur-front-left" rigid="true">
+<Transform>
+<Rotation>0.0033828454332516175 -0.99943028379135612 -0.033580711688472174 -0.098273113147696461 -0.03375061016545982 0.99458699546380525 -0.99515373264085927 -6.4452996234781734e-05 -0.098331298459730002</Rotation>
+<Translation>0.37812788774099104 -0.0064381139137752105 0.1267582617074931</Translation>
+</Transform>
+<Instance name="extra mount part-1" uid="extra mount part-1" entityUid="extra mount part*:*Default">
+<Transform>
+<Rotation>0.32481489887624371 -1.2490009027033011e-16 -0.9457776067702256 -0.9457776067702256 5.1239055858486038e-16 -0.32481489887624371 5.2735593669694936e-16 1.0000000000000002 0</Rotation>
+<Translation>0.045591342038700411 0.031002104226904081 0.030030460652649322</Translation>
+</Transform>
+</Instance>
+<Instance name="mini servo mount-1" uid="mini servo mount-1" entityUid="mini servo mount*:*Default">
+<Transform>
+<Rotation>0.32481489887624365 -0.94577760677022582 0 -0.94577760677022582 -0.32481489887624365 0 0 0 -1</Rotation>
+<Translation>0.008706015374661133 0.018334323170730416 0.042530460652649323</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO-1" uid="Assembly SERVO-1" entityUid="Assembly SERVO" rigid="true">
+<Transform>
+<Rotation>0.94577760677022615 -0.32481489887624249 2.6367796834847468e-16 0.32481489887624249 0.94577760677022615 1.2383791095447322e-16 -2.9143354396410359e-16 0 1.0000000000000002</Rotation>
+<Translation>0.013789570011051105 0.020080203252190232 0.0043855895118323253</Translation>
+</Transform>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" grounded="true" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817008</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817008</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="Microservo horn-1" uid="Microservo horn-1" entityUid="Microservo horn*:*?? ?????????">
+<Transform>
+<Rotation>0.41957011073626205 -0.90772293249469072 0 0.9077229324946906 0.4195701107362621 0 0 0 1</Rotation>
+<Translation>0.0087060153746610913 0.018334323170730471 0.0077304606526493388</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="femur-front-left-1" uid="femur-front-left-1" entityUid="femur-front-left" rigid="true">
+<Transform>
+<Rotation>0.041688695256823644 -0.99904570630398337 -0.013028023770271065 -0.043177034917264399 -0.014828585631585071 0.9989573848287624 -0.99819727325991892 -0.041082718553447861 -0.043754015732515028</Rotation>
+<Translation>0.11753122918650896 -0.013671817232299609 0.12882537693308327</Translation>
+</Transform>
+<Instance name="extra mount part-1" uid="extra mount part-1" entityUid="extra mount part*:*Default">
+<Transform>
+<Rotation>0.32481489887624376 0 -0.94577760677022571 -0.94577760677022571 5.1639283360892394e-16 -0.32481489887624376 5.2041704279304223e-16 1 0</Rotation>
+<Translation>0.045591342038700397 0.031002104226904054 0.030030460652649315</Translation>
+</Transform>
+</Instance>
+<Instance name="mini servo mount-1" uid="mini servo mount-1" entityUid="mini servo mount*:*Default">
+<Transform>
+<Rotation>0.32481489887624365 -0.94577760677022571 0 -0.94577760677022571 -0.3248148988762436 0 0 0 -1</Rotation>
+<Translation>0.0087060153746611191 0.018334323170730429 0.042530460652649316</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO-1" uid="Assembly SERVO-1" entityUid="Assembly SERVO" rigid="true">
+<Transform>
+<Rotation>0.94577760677022604 -0.32481489887624238 2.7205161766530749e-16 0.32481489887624238 0.94577760677022615 1.2644774034887033e-16 -2.9837243786801072e-16 0 1</Rotation>
+<Translation>0.013789570011051105 0.020080203252190218 0.0043855895118323149</Translation>
+</Transform>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" grounded="true" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="Microservo horn-1" uid="Microservo horn-1" entityUid="Microservo horn*:*?? ?????????">
+<Transform>
+<Rotation>0.41957011073626227 -0.90772293249469072 0 0.9077229324946906 0.41957011073626216 0 0 0 1</Rotation>
+<Translation>0.0087060153746610497 0.018334323170730429 0.0077304606526493354</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="femur-front-right-1" uid="femur-front-right-1" entityUid="femur-front-right" rigid="true">
+<Transform>
+<Rotation>-0.98710460908439934 -0.16006978702893371 -0.001467652835944046 -0.00079530766848041174 -0.0042643098054171184 0.9999905915295384 -0.16007453954344986 0.9870964891753975 0.0040820151343748581</Rotation>
+<Translation>0.11636831706557796 -0.017707092328896494 -0.19103275405006082</Translation>
+</Transform>
+<Instance name="Microservo horn-1" uid="Microservo horn-1" entityUid="Microservo horn*:*?? ?????????">
+<Transform>
+<Rotation>0.41957011073626205 -0.9077229324946906 0 0.90772293249469072 0.41957011073626205 0 0 0 1</Rotation>
+<Translation>0.0087060153746611468 0.018334323170730416 0.0072304606526493384</Translation>
+</Transform>
+</Instance>
+<Instance name="extra mount part-1" uid="extra mount part-1" entityUid="extra mount part*:*Default">
+<Transform>
+<Rotation>0.98304921288944591 -1.2323102598230251e-16 -0.18334188020591724 -0.18334188020591724 4.7584051368006488e-16 -0.98304921288944591 2.0838365755171395e-16 1 4.4518123443079785e-16</Rotation>
+<Translation>0.015856348702691841 0.056673242473418955 0.029730460652649338</Translation>
+</Transform>
+</Instance>
+<Instance name="mini servo mount_Right upper leg-1" uid="mini servo mount_Right upper leg-1" entityUid="mini servo mount_Right upper leg*:*Default">
+<Transform>
+<Rotation>0.98304921288944591 -0.18334188020591699 -2.0101108277881252e-16 -0.18334188020591707 -0.98304921288944624 1.6653345369377348e-16 -2.0621525320674294e-16 0 -1</Rotation>
+<Translation>0.030038183294362156 0.014355804370262015 0.042030460652649343</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO-1" uid="Assembly SERVO-1" entityUid="Assembly SERVO" rigid="true">
+<Transform>
+<Rotation>0.18334188020591721 -0.9830492128894458 6.5919187599415685e-16 0.98304921288944591 0.18334188020591718 1.0046606113289406e-15 -1.1084883011491793e-15 4.6382168938929899e-16 1</Rotation>
+<Translation>0.009691477980767943 0.023618212690011214 0.0038855895118323318</Translation>
+</Transform>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" grounded="true" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="gripper-front-right-1" uid="gripper-front-right-1" entityUid="gripper-front-right" rigid="true">
+<Transform>
+<Rotation>0.41924046724879027 0.9078740422636663 -0.0014676528359441113 -0.0030906685662680454 0.0030437838651262783 0.9999905915295384 0.90786996777557827 -0.41923198680875151 0.0040820151343748902</Rotation>
+<Translation>0.0077466469536744261 -0.055723915110486466 -0.14951153818163268</Translation>
+</Transform>
+<Instance name="Spring holder-1" uid="Spring holder-1" entityUid="Spring holder*:*Default">
+<Transform>
+<Rotation>0.29193046051626442 -0.95643954655940588 0 -0.95643954655940577 -0.29193046051626442 0 0 0 -1</Rotation>
+<Translation>0.0090509240422284587 0.0186656597121201 0.048918016620327839</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-1" uid="Suction cup-1" grounded="true" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.0090509240422284865 0.0186656597121201 0.022115954427231264</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-1" uid="Spring-1" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>1 0 1.1102230246251565e-16 1.1102230246251565e-16 0 1 0 -1.0000000000000002 0</Rotation>
+<Translation>0.0090507675600917104 0.018704122492608402 0.031542214856707579</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-7" uid="Spring-7" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>-0.99983351298709133 0 -0.01824681637688735 0.01824681637688735 0 -0.99983351298709133 0 -1 0</Rotation>
+<Translation>-0.031876741085003019 -0.010617945456925661 0.031542214856707586</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-6" uid="Suction cup-6" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.8601539529145168 0.51003448636884474 0 -0.51003448636884474 -0.86015395291451668 0 0 0 0.99999999999999989</Rotation>
+<Translation>-0.03644610587074007 0.039402589791050671 0.022115954427231292</Translation>
+</Transform>
+</Instance>
+<Instance name="Suction cup-5" uid="Suction cup-5" entityUid="Suction cup*:*Default">
+<Transform>
+<Rotation>-0.63661351981957293 -0.77118300446971355 0 0.77118300446971344 -0.63661351981957293 0 0 0 1</Rotation>
+<Translation>-0.031656299159111084 -0.010367458949785878 0.022115954427231278</Translation>
+</Transform>
+</Instance>
+<Instance name="Spring-6" uid="Spring-6" entityUid="Spring*:*Default">
+<Transform>
+<Rotation>0.47035282631064218 0 -0.88247845230441235 0.88247845230441258 0 0.47035282631064212 0 -1.0000000000000002 0</Rotation>
+<Translation>-0.036739648328804553 0.039618949993395755 0.031542214856707593</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly SERVO.stp-1" uid="Assembly SERVO.stp-1" entityUid="Assembly SERVO.stp" rigid="true">
+<Transform>
+<Rotation>-0.41473860157861275 -0.90994059825936813 1.2367300140309172e-16 -0.90994059825936802 0.41473860157861275 0 0 -1.3097162243624891e-16 -1</Rotation>
+<Translation>-0.0044423642932046314 0.049340183595710005 0.079012887761144845</Translation>
+</Transform>
+<Instance name="Assembly servo outside.stp-1" uid="Assembly servo outside.stp-1" grounded="true" entityUid="Assembly servo outside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+<Instance name="Assembly servo inside.stp-1" uid="Assembly servo inside.stp-1" grounded="true" entityUid="Assembly servo inside.stp*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0.020344871140817004</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>baseplate-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-assembly</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>body joint bracket-1</Uid>
+</InstancePath>
+<Position>0 0 0.0029999999999999983</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-assembly</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>baseplate-2</Uid>
+</InstancePath>
+<Position>-0.044494892613776663 0.057864477653328902 -0.0030000000000000027</Position>
+<Axis>-0.92387953251127475 0.38268343236511915 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-assembly</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric11">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-front-1</Uid>
+<Uid>Servo MG996R arm01-2</Uid>
+</InstancePath>
+<Position>0 0 0.0055000000000000014</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-servo-5</Uid>
+<Uid>MG996 servo mount-2</Uid>
+</InstancePath>
+<Position>0 0 0.011000000000000003</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident12">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-front-1</Uid>
+<Uid>Servo MG996R arm01-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-servo-5</Uid>
+<Uid>MG996 servo mount-2</Uid>
+</InstancePath>
+<Position>0 0 0.0015000000000000013</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric12">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-back-1</Uid>
+<Uid>Servo MG996R arm01-1</Uid>
+</InstancePath>
+<Position>0 0 0.0055000000000000049</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-servo-other-3</Uid>
+<Uid>MG996 servo mount-2</Uid>
+</InstancePath>
+<Position>0 0 0.011000000000000003</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident13">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-back-1</Uid>
+<Uid>Servo MG996R arm01-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-servo-other-3</Uid>
+<Uid>MG996 servo mount-2</Uid>
+</InstancePath>
+<Position>0 0 0.0015000000000000013</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric13">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-front-1</Uid>
+<Uid>Servo MG996R arm01-1</Uid>
+</InstancePath>
+<Position>0 0 0.0054999999999999979</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-front-left-servo-1</Uid>
+<Uid>MG996 servo mount-1</Uid>
+</InstancePath>
+<Position>0 0 0.010999999999999999</Position>
+<Axis>0 0 -0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident14">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-front-1</Uid>
+<Uid>Servo MG996R arm01-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-front-left-servo-1</Uid>
+<Uid>MG996 servo mount-1</Uid>
+</InstancePath>
+<Position>0 0 0.0015000000000000013</Position>
+<Axis>0 0 -0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric14">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-back-1</Uid>
+<Uid>Servo MG996R arm01-2</Uid>
+</InstancePath>
+<Position>0 0 0.0055000000000000049</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-front-left-servo-2</Uid>
+<Uid>MG996 servo mount-1</Uid>
+</InstancePath>
+<Position>0 0 0.011000000000000003</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident15">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>body-1</Uid>
+<Uid>shoulder-back-1</Uid>
+<Uid>Servo MG996R arm01-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-front-left-servo-2</Uid>
+<Uid>MG996 servo mount-1</Uid>
+</InstancePath>
+<Position>0 0 0.0015000000000000013</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric15">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-front-left-servo-1</Uid>
+<Uid>mg996r horn disk-1</Uid>
+</InstancePath>
+<Position>0 0 0.004500000000000004</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-left-1</Uid>
+<Uid>mini servo mount-1</Uid>
+</InstancePath>
+<Position>0.015516904755831243 -0.10739377269034946 0.0079999999999999984</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident16">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-front-left-servo-1</Uid>
+<Uid>mg996r horn disk-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-left-1</Uid>
+<Uid>mini servo mount-1</Uid>
+</InstancePath>
+<Position>-0.0021999999999999867 -0.10739377269034946 0.0079999999999999967</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric17">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-front-left-servo-2</Uid>
+<Uid>mg996r horn disk-1</Uid>
+</InstancePath>
+<Position>0 0 0.004500000000000004</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-left-2</Uid>
+<Uid>mini servo mount-1</Uid>
+</InstancePath>
+<Position>0.015516904755831173 -0.10739377269034941 0.0080000000000000002</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident17">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-front-left-servo-2</Uid>
+<Uid>mg996r horn disk-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-left-2</Uid>
+<Uid>mini servo mount-1</Uid>
+</InstancePath>
+<Position>-0.0022000000000000908 -0.10739377269034941 0.0080000000000000002</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric18">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-servo-5</Uid>
+<Uid>mg996r horn disk-2</Uid>
+</InstancePath>
+<Position>0 0 0.004500000000000004</Position>
+<Axis>1.1102230246251565e-16 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-right-1</Uid>
+<Uid>mini servo mount_Right upper leg-1</Uid>
+</InstancePath>
+<Position>-0.037216904755831219 -0.10739377269034941 0.0080000000000000019</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident18">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-servo-5</Uid>
+<Uid>mg996r horn disk-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1.1102230246251565e-16 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-right-1</Uid>
+<Uid>mini servo mount_Right upper leg-1</Uid>
+</InstancePath>
+<Position>-0.019500000000000003 -0.10739377269034943 0.0080000000000000054</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric19">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shoulder-servo-other-3</Uid>
+<Uid>mg996r horn disk-2</Uid>
+</InstancePath>
+<Position>0 0 0.004500000000000004</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-right-2</Uid>
+<Uid>mini servo mount_Right upper leg-1</Uid>
+</InstancePath>
+<Position>-0.037216904755831171 -0.10739377269034936 0.0080000000000000002</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident19">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shoulder-servo-other-3</Uid>
+<Uid>mg996r horn disk-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-right-2</Uid>
+<Uid>mini servo mount_Right upper leg-1</Uid>
+</InstancePath>
+<Position>-0.019499999999999962 -0.10739377269034936 0.0080000000000000002</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric20">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-left-2</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0.0055000000000000049</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>gripper-back-left-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>-0.073888044725896246 -0.031969305200923503 0.012071067811865906</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident21">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-left-2</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>gripper-back-left-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000036</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric21">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-right-2</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0.00050000000000000044</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>gripper-back-right-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>-0.073888044725896218 -0.031969305200923531 0.012071067811865911</Position>
+<Axis>0 -1.0581813203458523e-16 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident22">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-right-2</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>gripper-back-right-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000018</Position>
+<Axis>0 -1.0755285551056204e-16 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric22">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-left-1</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0.00050000000000000044</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>gripper-front-left-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>-0.073888044725896218 -0.031969305200923503 0.012071067811865913</Position>
+<Axis>0 -1.0408340855860843e-16 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident23">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-left-1</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>gripper-front-left-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000018</Position>
+<Axis>0 -1.0408340855860843e-16 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric23">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>femur-front-right-1</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0.00050000000000000044</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>gripper-front-right-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>-0.073888044725896218 -0.03196930520092349 0.012071067811865906</Position>
+<Axis>0 -1.0711917464156784e-16 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident24">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>femur-front-right-1</Uid>
+<Uid>Microservo horn-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>gripper-front-right-1</Uid>
+<Uid>Spring holder-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000001</Position>
+<Axis>0 -1.0755285551056204e-16 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="shoulder-front-left-servo" uid="shoulder-front-left-servo" version="379">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="shoulder-front-left-servo.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="MG996R.STEP" uid="MG996R.STEP" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="MG996R.STEP.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="gripper-back-right" uid="gripper-back-right" version="309">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="gripper-back-right.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Assembly SERVO.stp" uid="Assembly SERVO.stp" version="105">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Assembly SERVO.stp.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="gripper-front-left" uid="gripper-front-left" version="309">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="gripper-front-left.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="gripper-back-left" uid="gripper-back-left" version="309">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="gripper-back-left.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="shoulder-servo" uid="shoulder-servo" version="377">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="shoulder-servo.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="body" uid="body" version="277">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="body.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="shoulder-back" uid="shoulder-back" version="375">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="shoulder-back.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="shoulder-front" uid="shoulder-front" version="375">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="shoulder-front.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="shoulder-servo-other" uid="shoulder-servo-other" version="368">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="shoulder-servo-other.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="femur-front-right" uid="femur-front-right" version="210">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="femur-front-right.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Assembly SERVO" uid="Assembly SERVO" version="105">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Assembly SERVO.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="femur-front-left" uid="femur-front-left" version="194">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="femur-front-left.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="gripper-front-right" uid="gripper-front-right" version="309">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="gripper-front-right.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="Assembly servo inside.stp" uid="Assembly servo inside.stp*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Assembly servo inside.stp.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0021514313917404956</Mass>
+<CenterOfMass>0.00095344001091226312 2.4920530973287045e-06 0.0029640901626249087</CenterOfMass>
+<Inertia>1.2667678623717156e-07 1.8985269872603195e-07 9.1612046027185716e-08 6.4013395411861034e-12 -4.2964626926470464e-08 -1.2698193491562796e-11</Inertia>
+</MassProperties>
+<GeometryFile name="Assembly servo inside.stp_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.95686274509803915" g="0.95686274509803915" b="0.95686274509803915" a="1"/>
+<Diffuse r="0.95686274509803915" g="0.95686274509803915" b="0.95686274509803915" a="1"/>
+<Specular r="0.47843137254901957" g="0.47843137254901957" b="0.47843137254901957" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Assembly servo outside.stp" uid="Assembly servo outside.stp*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Assembly servo outside.stp.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0027322825687335697</Mass>
+<CenterOfMass>-0.00041833362463059335 -1.4630346207467449e-06 0.001832292096342074</CenterOfMass>
+<Inertia>2.2630946090394373e-07 3.4876970521585222e-07 2.2449034442471084e-07 6.8098767625729048e-13 -1.5498668750467385e-08 -8.4053371869410238e-13</Inertia>
+</MassProperties>
+<GeometryFile name="Assembly servo outside.stp_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.0078431372549019607" g="0.0078431372549019607" b="0.0078431372549019607" a="1"/>
+<Diffuse r="0.0078431372549019607" g="0.0078431372549019607" b="0.0078431372549019607" a="1"/>
+<Specular r="0.0039215686274509803" g="0.0039215686274509803" b="0.0039215686274509803" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="MG996 servo mount 2 with hing (Upper body)" uid="MG996 servo mount 2 with hing (Upper body)*:*Default" version="406">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="MG996 servo mount 2 with hing (Upper body).SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.056764392265510936</Mass>
+<CenterOfMass>0.032510696054692464 0.0084021853443598266 0.029604230133473613</CenterOfMass>
+<Inertia>4.6821805936237294e-05 7.8584465005805893e-05 7.057108827801604e-05 -1.2368027434247822e-06 5.1195391116281469e-07 -1.5881542859952716e-05</Inertia>
+</MassProperties>
+<GeometryFile name="MG996 servo mount 2 with hing (Upper body)_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="MG996 servo mount" uid="MG996 servo mount*:*Default" version="305">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="MG996 servo mount.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0087006546575156378</Mass>
+<CenterOfMass>0 0.0007218034448122977 0.014469515138761324</CenterOfMass>
+<Inertia>1.0775602874972703e-06 3.6734315437005945e-06 3.0071047060530593e-06 6.0887126214287467e-09 -7.6296548484549574e-12 0</Inertia>
+</MassProperties>
+<GeometryFile name="MG996 servo mount_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Microservo horn" uid="Microservo horn*:*?? ?????????" version="192">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Microservo horn.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0024998463034132971</Mass>
+<CenterOfMass>0 0 0.00156861414053556</CenterOfMass>
+<Inertia>1.1370129697881283e-08 1.5625956144783963e-07 1.5995072178776628e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Microservo horn_?? ?????????_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.20000000298023224" g="0.20000000298023224" b="0.20000000298023224" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.20000000298023224</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Servo MG996R arm01" uid="Servo MG996R arm01*:*Default" version="289">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Servo MG996R arm01.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00068370531177794748</Mass>
+<CenterOfMass>0 0 0.0016447525623491228</CenterOfMass>
+<Inertia>5.5339348619207927e-09 5.5618893878790005e-08 5.9083463846795995e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Servo MG996R arm01_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Diffuse r="0.75294117647058822" g="0.75294117647058822" b="0.75294117647058822" a="1"/>
+<Specular r="0.37647058823529411" g="0.37647058823529411" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Spring holder" uid="Spring holder*:*Default" version="2941">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Spring holder.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.072461986344036639</Mass>
+<CenterOfMass>-0.023444026625013454 0.012657538793556071 0.00024476410376121128</CenterOfMass>
+<Inertia>6.7428679803810024e-05 7.7488694679511615e-05 0.00011964448702523617 -9.4645477525394246e-06 -1.0706861990165092e-05 -4.0743135468105544e-05</Inertia>
+</MassProperties>
+<GeometryFile name="Spring holder_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Spring" uid="Spring*:*Default" version="170">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Spring.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00085519259447285534</Mass>
+<CenterOfMass>0.00018613062208043852 -0.0074750086152248277 1.168243751487206e-05</CenterOfMass>
+<Inertia>2.0508454795064511e-08 1.3814380327993781e-08 2.0455864362558207e-08 -1.3926687283072041e-10 7.8322257852691258e-12 9.2478075429712425e-12</Inertia>
+</MassProperties>
+<GeometryFile name="Spring_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Suction cup" uid="Suction cup*:*Default" version="202">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Suction cup.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00096631801709073906</Mass>
+<CenterOfMass>6.2214920412047235e-07 -1.601850109302112e-07 0.004195517718426532</CenterOfMass>
+<Inertia>6.6139911556962375e-08 6.6200510220360327e-08 1.1486249507537785e-07 -5.0804802432575158e-13 1.7604820841807906e-12 4.747246562527862e-12</Inertia>
+</MassProperties>
+<GeometryFile name="Suction cup_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="baseplate" uid="baseplate*:*Default" version="137">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="baseplate.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.03775062998410289</Mass>
+<CenterOfMass>0.016734456564640295 0.12729142496255114 -0.0015000000000000002</CenterOfMass>
+<Inertia>8.6732745534937383e-05 2.3971356410035346e-05 0.00011064747599999658 0 0 -3.1380694562454718e-05</Inertia>
+</MassProperties>
+<GeometryFile name="baseplate_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="0.34999999999999998"/>
+<Diffuse r="1" g="1" b="1" a="0.34999999999999998"/>
+<Specular r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="0.34999999999999998"/>
+<Emissive r="0" g="0" b="0" a="0.34999999999999998"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="bearing" uid="bearing*:*Default" version="118">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="bearing.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0010885618544688631</Mass>
+<CenterOfMass>0 0.0029999999999999996 0</CenterOfMass>
+<Inertia>2.2383553132515999e-08 3.823573513821882e-08 2.2383553132516002e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="bearing_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0.75294117647058822" b="1" a="1"/>
+<Diffuse r="1" g="0.75294117647058822" b="1" a="1"/>
+<Specular r="0.5" g="0.37647058823529411" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="body joint bracket" uid="body joint bracket*:*Default" version="225">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="body joint bracket.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.014950542014123819</Mass>
+<CenterOfMass>-0.033251697507544704 -0.027425986208091845 -0.034362706466701733</CenterOfMass>
+<Inertia>2.613012948747037e-05 1.4608279421360998e-05 1.2502788518739864e-05 -2.4716107078715962e-08 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="body joint bracket_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.75294117647058822" g="1" b="0.75294117647058822" a="1"/>
+<Diffuse r="0.75294117647058822" g="1" b="0.75294117647058822" a="1"/>
+<Specular r="0.37647058823529411" g="0.5" b="0.37647058823529411" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="extra mount part" uid="extra mount part*:*Default" version="281">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="extra mount part.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.01206004818401853</Mass>
+<CenterOfMass>1.4664539596788211e-07 -0.020872062410350514 0.014663208189330392</CenterOfMass>
+<Inertia>4.4230370192525797e-06 3.2570949974328852e-06 2.2973788867762245e-06 1.0341121844818395e-06 1.1714608730373571e-12 2.3898759191832037e-12</Inertia>
+</MassProperties>
+<GeometryFile name="extra mount part_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="mg996r horn disk" uid="mg996r horn disk*:*Default" version="121">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="mg996r horn disk.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00063336481035485199</Mass>
+<CenterOfMass>0 0 0.00132085305574777</CenterOfMass>
+<Inertia>1.5547660291995301e-08 1.5547660291995251e-08 2.9811377124477255e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="mg996r horn disk_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="mini servo mount" uid="mini servo mount*:*Default" version="341">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="mini servo mount.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.037716238951945848</Mass>
+<CenterOfMass>0.00046806516614435314 -0.061431448349064631 0.008864336422792992</CenterOfMass>
+<Inertia>5.4689037278801009e-05 2.8698372668246551e-06 5.3347555321230734e-05 2.7706062814347623e-07 -5.8882227161222048e-08 6.3736034782857385e-07</Inertia>
+</MassProperties>
+<GeometryFile name="mini servo mount_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="mini servo mount_Right upper leg" uid="mini servo mount_Right upper leg*:*Default" version="120">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="mini servo mount_Right upper leg.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.03771623243383683</Mass>
+<CenterOfMass>-0.022168064893883715 -0.061431452301074004 0.0088643371911095604</CenterOfMass>
+<Inertia>5.4689032900726026e-05 2.8698370330770593e-06 5.3347551259238204e-05 2.7705975859444157e-07 5.8882102698566882e-08 -6.3736030016334217e-07</Inertia>
+</MassProperties>
+<GeometryFile name="mini servo mount_Right upper leg_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="servo.STEP" uid="servo.STEP*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="servo.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.030618086130328993</Mass>
+<CenterOfMass>-0.00013380080461281705 0.018779412899596365 0</CenterOfMass>
+<Inertia>4.5519126193659764e-06 5.3252855816552644e-06 7.8658675477353615e-06 0 0 7.5658020823037478e-08</Inertia>
+</MassProperties>
+<GeometryFile name="servo.STEP_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.098039215686274508" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Diffuse r="0.098039215686274508" g="0.098039215686274508" b="0.098039215686274508" a="1"/>
+<Specular r="0.049019607843137254" g="0.049019607843137254" b="0.049019607843137254" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="shaft.STEP" uid="shaft.STEP*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="shaft.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>9.2739815133970692e-05</Mass>
+<CenterOfMass>0 0.002 0</CenterOfMass>
+<Inertia>3.5608224852480844e-10 4.6485832335902811e-10 3.5608224852480834e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="shaft.STEP_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.51764705882352935" b="0" a="1"/>
+<Specular r="0.3235294117647059" g="0.25882352941176467" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="spacer" uid="spacer*:*Default" version="118">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="spacer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00057805304826052213</Mass>
+<CenterOfMass>0 0.023 0</CenterOfMass>
+<Inertia>1.0315838357082574e-07 2.4567254551072185e-09 1.0315838357082574e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="spacer_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0.090196078431372548" b="0.25882352941176467" a="1"/>
+<Diffuse r="1" g="0.090196078431372548" b="0.25882352941176467" a="1"/>
+<Specular r="0.5" g="0.045098039215686274" b="0.12941176470588234" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
