@@ -9,7 +9,7 @@ An Arduino sketch for testing the servo movements and required angles for one le
 ### Requirements
 
 - Make sure the hardware is properly connected and working.
-- Make sure that the max, min PWM values for each servo is known and in proper index position. To calibrate the servos, run `servo_calibratin.ino`
+- Make sure that the max, min PWM values for each servo is known and in proper index position. To calibrate the servos, run `servo_calibration.ino`
 
 ### Required Arduino Libraries
 
