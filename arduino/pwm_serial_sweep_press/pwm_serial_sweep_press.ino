@@ -8,33 +8,50 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 bool flag = true;
 
 // array of max and min pwm values for servos, found from servo_calibration.ino
-const int SERVO_MIN[16] = {70, 70, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-const int SERVO_MAX[16] = {450, 450, 470, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+const int SERVO_MIN[16] = {70, 70, 100, 70, 70, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+const int SERVO_MAX[16] = {450, 450, 470, 450, 450, 470, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 
 /////////////////////////// ADJUSTABLE PARAMETERS ///////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// FLIP DIRECTIONS IF NECESSARY  ///////////////////////////////
 
-const int SERVO_DIR[16] = {1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};  // flip direction of servo 
+const int SERVO_DIR[16] = {1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};  // flip direction of servo 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////  ADJUST IF NEEDED  ////////////////////////////////////////////
+/////////////////////////////  ADJUST IF NEEDED (for front right leg)  ////////////////////////////////////////////
 
-const int THETA1_INIT = 30; // initial joint angles (degree)
+const int THETA1_INIT = 45; // initial joint angles (degree)
 const int THETA3_INIT = 0;
-const int THETA2_INIT = 60;
+const int THETA2_INIT = 90;
 
-const int THETA1_FRONT_ANGLE = 10;  // shoulder servo (servo 0) front and back angles
+const int THETA1_FRONT_ANGLE = 30;  // shoulder servo (servo 0) front and back angles
 const int THETA1_BACK_ANGLE = 90;
 
-const int THETA2_PRESSURE_ANGLE = 100;  // elbow servo (servo 1) pressure and release angles
+const int THETA2_PRESSURE_ANGLE = 90;  // elbow servo (servo 1) pressure and release angles
 const int THETA2_RELEASE_ANGLE = 50;
 
 const int THETA3_PULL_ANGLE = 180;  // gripper servo (servo 2) pull and release angle
 const int THETA3_RELEASE_ANGLE = 0;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////  ADJUST IF NEEDED (for front left leg)  ////////////////////////////////////////////
+
+const int THETA4_INIT = 45; // initial joint angles (degree)
+const int THETA6_INIT = 0;
+const int THETA5_INIT = 60;
+
+const int THETA4_FRONT_ANGLE = 30;  // shoulder servo (servo 0) front and back angles
+const int THETA4_BACK_ANGLE = 90;
+
+const int THETA5_PRESSURE_ANGLE = 90;  // elbow servo (servo 1) pressure and release angles
+const int THETA5_RELEASE_ANGLE = 50;
+
+const int THETA6_PULL_ANGLE = 180;  // gripper servo (servo 2) pull and release angle
+const int THETA6_RELEASE_ANGLE = 0;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -86,9 +103,11 @@ void move_servos(int* servo_idx, float* theta){
 }
 
 // function for executing a trajectory once
-void execute_path_forward(int* servo_idx, float* theta){
+void right_leg_forward(){
 
-  Serial.println("Executing leg forward movement:");
+  int servo_idx[3] = {0, 1, 2};
+
+  Serial.println("Executing right leg forward movement:");
   Serial.println("");
   ////////// adjust theta /////////////
   float theta1[3] = {THETA1_FRONT_ANGLE, THETA2_RELEASE_ANGLE, 0};
@@ -96,39 +115,63 @@ void execute_path_forward(int* servo_idx, float* theta){
   /////////////////////////////////////
   
   move_servos(servo_idx, theta1);
-  delay(2000);
+  delay(200);
   move_servos(servo_idx, theta2);
-  delay(2000);
-
-  // print the angles in serial monitor
-  Serial.println("Executing Angles: ");
-  Serial.println((theta[0]));
-  Serial.println((theta[1]));
-  Serial.println((theta[2]));
-  //delay(500);
+  //delay(2000);
 }
 
 // function for executing a backward trajectory once
-void execute_path_backward(int* servo_idx, float* theta){
+void right_leg_backward(){
 
-  Serial.println("Executing leg backward movement:");
+  const int servo_idx[3] = {0, 1, 2};
+
+  Serial.println("Executing right leg backward movement:");
   Serial.println("");
   ///////// adjust theta ////////////////
   float theta1[3] = {THETA1_BACK_ANGLE, THETA2_PRESSURE_ANGLE, 0};
   float theta2[3] = {THETA1_BACK_ANGLE, THETA2_RELEASE_ANGLE, 0};
   ///////////////////////////////////////
   move_servos(servo_idx, theta1);
-  delay(2000);
+  delay(200);
   move_servos(servo_idx, theta2);
-  delay(2000);
-
-  // print the angles in serial monitor
-  Serial.println("Executing Angles: ");
-  Serial.println((theta[0]));
-  Serial.println((theta[1]));
-  Serial.println((theta[2]));
-  //delay(500);
+  //delay(2000);
 }
+
+// function for executing a trajectory once
+void left_leg_forward(){
+
+  int servo_idx[3] = {3, 4, 5};
+
+  Serial.println("Executing left leg forward movement:");
+  Serial.println("");
+  ////////// adjust theta /////////////
+  float theta1[3] = {THETA4_FRONT_ANGLE, THETA5_RELEASE_ANGLE, 0};
+  float theta2[3] = {THETA4_FRONT_ANGLE, THETA5_PRESSURE_ANGLE, 0};
+  /////////////////////////////////////
+  
+  move_servos(servo_idx, theta1);
+  delay(200);
+  move_servos(servo_idx, theta2);
+  //delay(2000);
+}
+
+// function for executing a backward trajectory once
+void left_leg_backward(){
+
+  const int servo_idx[3] = {3, 4, 5};
+
+  Serial.println("Executing left leg backward movement:");
+  Serial.println("");
+  ///////// adjust theta ////////////////
+  float theta1[3] = {THETA4_BACK_ANGLE, THETA5_PRESSURE_ANGLE, 0};
+  float theta2[3] = {THETA4_BACK_ANGLE, THETA5_RELEASE_ANGLE, 0};
+  ///////////////////////////////////////
+  move_servos(servo_idx, theta1);
+  delay(200);
+  move_servos(servo_idx, theta2);
+  //delay(2000);
+}
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -155,11 +198,13 @@ void loop() {
 
     /////////////////////////////// do what you gotta do each time there's an input in the serial monitor ////////////////////////////////////
     if(flag){
-      move_servos_forward(servo_idx);  // execute the desired trajectory
+      right_leg_forward();  // execute the desired trajectory
+      left_leg_backward();
       delay(3000);
     }
     else{
-      move_servos_backward(servo_idx);  // execute the desired trajectory
+      right_leg_backward();
+      left_leg_forward();  // execute the desired trajectory
       delay(3000);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
