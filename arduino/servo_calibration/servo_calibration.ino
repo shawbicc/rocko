@@ -4,12 +4,13 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 #define SERVO_FREQ 50 // Analog servos run at ~50 Hz updates
 const int SERVO_MIN[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 70, 0};
 const int SERVO_MAX[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 470, 450, 450};
+bool flag = true;
 
 ///////////////////////////// ADJUSTABLE PARAMETERS ////////////////////
 ////////////////////////////////////////////////////////////////////////
-int servonum = 15;
-int SERVOMIN = 70;  
-int SERVOMAX = 450;  
+int servonum = 5;
+int SERVOMIN = 100;  
+int SERVOMAX = 470;  
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
@@ -24,7 +25,12 @@ float angle_rad(int servo_no, int servo_value){
   return angle_radian; 
 }
 
+int angle_to_pwm(int angle_deg){
+  return map(angle_deg, 0, 180, SERVOMIN, SERVOMAX);
+}
+
 void setup() {
+  Serial.begin(9600);
   Serial.println("Servo Calibration");
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
@@ -34,14 +40,23 @@ void setup() {
 
 
 void loop() {
-  for (uint16_t pulselen = SERVOMIN; pulselen < SERVOMAX; pulselen++) {
-    pwm.setPWM(servonum, 0, pulselen);
-  }
-  delay(2000);
+  if(Serial.available()>0){
 
-  for (uint16_t pulselen = SERVOMAX; pulselen > SERVOMIN; pulselen--) {
-    pwm.setPWM(servonum, 0, pulselen);
+    /////////////////////////////// do what you gotta do each time there's an input in the serial monitor ////////////////////////////////////
+    if(flag){
+      pwm.setPWM(servonum, 0, angle_to_pwm(0));
+      Serial.println("angle: 0");
+    }
+    else{
+      pwm.setPWM(servonum, 0, angle_to_pwm(130));
+      Serial.println("angle: 130");
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // clear buffer
+    flag = !flag;
+    while(Serial.available()>0){
+      String garbage = Serial.readString();
+    }
   }
-  delay(2000);
-
 }

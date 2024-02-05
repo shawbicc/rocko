@@ -27,14 +27,14 @@ const int THETA1_INIT = 45; // initial joint angles (degree)
 const int THETA3_INIT = 0;
 const int THETA2_INIT = 90;
 
-const int THETA1_FRONT_ANGLE = 30;  // shoulder servo (servo 0) front and back angles
-const int THETA1_BACK_ANGLE = 90;
+const int THETA1_LEFT_ANGLE = 90;  // shoulder servo (servo 0) front and back angles
+const int THETA1_RIGHT_ANGLE = 30;
 
 const int THETA2_PRESSURE_ANGLE = 90;  // elbow servo (servo 1) pressure and release angles
 const int THETA2_RELEASE_ANGLE = 50;
 
-const int THETA3_PULL_ANGLE = 180;  // gripper servo (servo 2) pull and release angle
-const int THETA3_RELEASE_ANGLE = 0;
+const int THETA3_PULL_ANGLE = 0;  // gripper servo (servo 2) pull and release angle
+const int THETA3_RELEASE_ANGLE = 140;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,15 +42,15 @@ const int THETA3_RELEASE_ANGLE = 0;
 
 const int THETA4_INIT = 45; // initial joint angles (degree)
 const int THETA6_INIT = 0;
-const int THETA5_INIT = 60;
+const int THETA5_INIT = 90;
 
-const int THETA4_FRONT_ANGLE = 30;  // shoulder servo (servo 0) front and back angles
-const int THETA4_BACK_ANGLE = 90;
+const int THETA4_RIGHT_ANGLE = 90;  // shoulder servo (servo 0) front and back angles
+const int THETA4_LEFT_ANGLE = 30;
 
 const int THETA5_PRESSURE_ANGLE = 90;  // elbow servo (servo 1) pressure and release angles
 const int THETA5_RELEASE_ANGLE = 50;
 
-const int THETA6_PULL_ANGLE = 180;  // gripper servo (servo 2) pull and release angle
+const int THETA6_PULL_ANGLE = 140;  // gripper servo (servo 2) pull and release angle
 const int THETA6_RELEASE_ANGLE = 0;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +87,7 @@ float degree(float radian) {return radian*180/PI;}
 
 // fucntion for moving the servos to given position (degree)
 void move_servos(int* servo_idx, float* theta){
-  for(int i=0; i<=sizeof(theta); i++){
+  for(int i=0; i<=3; i++){
     int PWM = angle_to_pwm(theta[i], servo_idx[i]);
     pwm.setPWM(servo_idx[i], 0, PWM);
 
@@ -105,71 +105,50 @@ void move_servos(int* servo_idx, float* theta){
 // function for executing a trajectory once
 void right_leg_forward(){
 
-  int servo_idx[3] = {0, 1, 2};
+  int servo_idx[4] = {3, 0, 1, 2};
 
   Serial.println("Executing right leg forward movement:");
   Serial.println("");
+
   ////////// adjust theta /////////////
-  float theta1[3] = {THETA1_FRONT_ANGLE, THETA2_RELEASE_ANGLE, 0};
-  float theta2[3] = {THETA1_FRONT_ANGLE, THETA2_PRESSURE_ANGLE, 0};
+  float theta1[4] = {THETA4_LEFT_ANGLE, THETA1_LEFT_ANGLE, THETA2_PRESSURE_ANGLE, THETA3_PULL_ANGLE};
+  float theta2[4] = {THETA4_LEFT_ANGLE, THETA1_LEFT_ANGLE, THETA2_RELEASE_ANGLE, THETA3_PULL_ANGLE};
+  float theta3[4] = {THETA4_RIGHT_ANGLE, THETA1_RIGHT_ANGLE, THETA2_RELEASE_ANGLE, THETA3_RELEASE_ANGLE};
+  float theta4[4] = {THETA4_RIGHT_ANGLE, THETA1_RIGHT_ANGLE, THETA2_PRESSURE_ANGLE, THETA3_RELEASE_ANGLE};
   /////////////////////////////////////
-  
+
   move_servos(servo_idx, theta1);
-  delay(200);
+  delay(500);
   move_servos(servo_idx, theta2);
-  //delay(2000);
+  delay(500);
+  move_servos(servo_idx, theta3);
+  delay(500);
+  move_servos(servo_idx, theta4);
 }
 
-// function for executing a backward trajectory once
-void right_leg_backward(){
-
-  const int servo_idx[3] = {0, 1, 2};
-
-  Serial.println("Executing right leg backward movement:");
-  Serial.println("");
-  ///////// adjust theta ////////////////
-  float theta1[3] = {THETA1_BACK_ANGLE, THETA2_PRESSURE_ANGLE, 0};
-  float theta2[3] = {THETA1_BACK_ANGLE, THETA2_RELEASE_ANGLE, 0};
-  ///////////////////////////////////////
-  move_servos(servo_idx, theta1);
-  delay(200);
-  move_servos(servo_idx, theta2);
-  //delay(2000);
-}
 
 // function for executing a trajectory once
 void left_leg_forward(){
 
-  int servo_idx[3] = {3, 4, 5};
+  int servo_idx[4] = {3, 0, 4, 5};
 
   Serial.println("Executing left leg forward movement:");
   Serial.println("");
+
   ////////// adjust theta /////////////
-  float theta1[3] = {THETA4_FRONT_ANGLE, THETA5_RELEASE_ANGLE, 0};
-  float theta2[3] = {THETA4_FRONT_ANGLE, THETA5_PRESSURE_ANGLE, 0};
+  float theta1[4] = {THETA4_RIGHT_ANGLE, THETA1_RIGHT_ANGLE, THETA5_PRESSURE_ANGLE, THETA6_PULL_ANGLE};
+  float theta2[4] = {THETA4_RIGHT_ANGLE, THETA1_RIGHT_ANGLE, THETA5_RELEASE_ANGLE, THETA6_PULL_ANGLE};
+  float theta3[4] = {THETA4_LEFT_ANGLE, THETA1_LEFT_ANGLE, THETA5_RELEASE_ANGLE, THETA6_RELEASE_ANGLE};
+  float theta4[4] = {THETA4_LEFT_ANGLE, THETA1_LEFT_ANGLE, THETA5_PRESSURE_ANGLE, THETA6_RELEASE_ANGLE};
   /////////////////////////////////////
-  
+
   move_servos(servo_idx, theta1);
-  delay(200);
+  delay(500);
   move_servos(servo_idx, theta2);
-  //delay(2000);
-}
-
-// function for executing a backward trajectory once
-void left_leg_backward(){
-
-  const int servo_idx[3] = {3, 4, 5};
-
-  Serial.println("Executing left leg backward movement:");
-  Serial.println("");
-  ///////// adjust theta ////////////////
-  float theta1[3] = {THETA4_BACK_ANGLE, THETA5_PRESSURE_ANGLE, 0};
-  float theta2[3] = {THETA4_BACK_ANGLE, THETA5_RELEASE_ANGLE, 0};
-  ///////////////////////////////////////
-  move_servos(servo_idx, theta1);
-  delay(200);
-  move_servos(servo_idx, theta2);
-  //delay(2000);
+  delay(500);
+  move_servos(servo_idx, theta3);
+  delay(500);
+  move_servos(servo_idx, theta4);
 }
 
 
@@ -183,29 +162,29 @@ void setup() {
 
   // set an initial position
   Serial.println("Setting initial servo positions: ");
-  float initial_angles[3] = {(THETA1_INIT), (THETA2_INIT), (THETA3_INIT)};
-  int servo_idx[3] = {0, 1, 2};
-  move_servos(servo_idx, initial_angles);
+  
+  float front_right_initial_angles[3] = {(THETA1_INIT), (THETA2_INIT), (THETA3_INIT)};
+  float front_left_initial_angles[3] = {(THETA4_INIT), (THETA5_INIT), (THETA6_INIT)};
+
+  int front_right_servo_idx[3] = {0, 1, 2};
+  int front_left_servo_idx[3] = {3, 4, 5};
+
+  move_servos(front_right_servo_idx, front_right_initial_angles);
+  move_servos(front_left_servo_idx, front_left_initial_angles);
   
   delay(2000);
 }
 
 void loop() {
-  float theta[3];  // array for angles
-  int servo_idx[3] = {0, 1, 2};  // array for servo index according to wiring on Servo driver
-  // put your main code here, to run repeatedly:
+
   if(Serial.available()>0){
 
     /////////////////////////////// do what you gotta do each time there's an input in the serial monitor ////////////////////////////////////
     if(flag){
       right_leg_forward();  // execute the desired trajectory
-      left_leg_backward();
-      delay(3000);
     }
     else{
-      right_leg_backward();
       left_leg_forward();  // execute the desired trajectory
-      delay(3000);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
