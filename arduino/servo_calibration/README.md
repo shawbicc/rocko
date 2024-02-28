@@ -1,4 +1,4 @@
-# pwm_serial_sweep_press
+# servo_calibration
 
 An Arduino sketch for calibrating the servos and finding the maximum and minimum PWM values for the servos to rotate from 0 to 180 degrees. Attach each servo to a specific port on the PWM servo driver and go through the tedious process of trial and error to find out the limits. **Up to 16 servos can be attached, but only one servo can be calibrated at a time.** Code can be further modified for calibrating multiple servos at a time.
 
